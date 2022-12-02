@@ -1,3 +1,15 @@
+/* Variables and globals. */
+
+:root {
+  --primary-color: rgb(54, 53, 53);
+  --secondary-color: rgb(19, 170, 184);
+  --light-text: white;
+  --midlight-text: rgb(19, 170, 184);
+  --dark-text: rgb(15, 62, 117);
+  --pf-columns: repeat(2, 1fr);
+  --pf-rows: 500px repeat(2, 250px);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,4 +32,151 @@ h6 {
 
 p {
   margin: 0;
+}
+
+.highlight {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  padding: 10px;
+}
+
+/* Header, nav menu. */
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5em;;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+header nav ul li a {
+  color: var(--midlight-text);
+}
+
+/* Hero banner. */
+
+.hero-banner {
+  background: center/100% no-repeat url("../images/02-hero-bg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+/* Main content - about, work, contact. */
+
+/*
+main {
+
+}
+*/
+
+.page-wrapper {
+  margin: 2.33em;
+}
+
+/*
+main section {
+
+}
+*/
+
+.page-section {
+  display: flex;
+  margin: 1.63em;
+}
+
+.page-section h2 {
+  color: var(--dark-text);
+  font-size: 2.333em;
+  border-right: 1rem solid var(--dark-text);
+  padding: 1em;
+}
+
+#about {
+
+}
+
+#about .brief {
+  margin: 0 1em;
+
+}
+
+#work {
+
+}
+
+#work .projects {
+  display: grid;
+  grid-template-columns: var(--pf-columns);
+  grid-template-rows: var(--pf-rows);
+  grid-template-areas: 
+   'main main'
+   '. .'
+   '. .'
+   ;
+}
+
+#work .projects article {
+  border: solid 3px var(--primary-color);
+  margin: 0 10px 10px;
+}
+
+#work .projects article:first-child {
+  grid-area: main;
+  background: center/100% no-repeat url("../images/02-run-buddy.jpg");
+}
+
+#work .projects article:nth-child(2) {
+  background: center/100% no-repeat url("../images/02-portfolio-1.jpg");
+}
+
+#work .projects article:nth-child(3) {
+  background: center/100% no-repeat url("../images/02-portfolio-2.jpg");
+}
+
+#work .projects article:nth-child(4) {
+  background: center/100% no-repeat url("../images/02-portfolio-3.jpg");
+}
+
+#work .projects article:nth-child(5) {
+  background: center/100% no-repeat url("../images/02-portfolio-4.jpg");
+}
+
+/* #work .projects img {
+  position: absolute;
+  width: 70%; 
+  opacity: 0.5;
+} */
+
+#work .projects .container h3,
+#work .projects .container p {
+  /* TODO: Create another highlight style for this content. */
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  padding: 10px;
+}
+
+#contact {
+
+}
+
+#contact address {
+  display: block;
+  margin: 0 1.33em;;
+}
+
+/* Footer */
+
+footer {
+
 }
